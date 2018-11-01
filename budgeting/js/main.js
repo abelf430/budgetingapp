@@ -105,7 +105,7 @@ function netIncome() {
   let incomeaftertithe = income - titheAmnt;
   let incomeafterCost = income - totalCost;
   let incomeafterTandC = incomeaftertithe - totalCost;
-  var savings = incomeafterCost * .43;
+  var savings = incomeafterCost * .40;
   document.getElementById('savings').innerHTML = savings.toLocaleString('us-US', { style: 'currency', currency: 'USD' });
 
   const costPercent = totalCost/incomeaftertithe;
