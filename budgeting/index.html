@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css.map">
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/man1.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+  <body>
+    <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+    <h1 class="title">Budget App<h1>
+    <form name="myForm">
+      <label class="label">This week's projected hours</label>
+      <input id="hours" class="input" type="number" placeholder="Enter Projected Hours" style="width: 20%;" />
+      <input type="button" class="button is-link" onclick="netIncome();" value="Submit"/>
+
+      <div class="level" style="margin-top: 20px;">
+        <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Net Income for this week is:</p>
+        <p class="title"><span id="netIncome"></span></p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Cost for this week:</p>
+        <p class="title is-primary" style="color: hsl(348, 90%, 41%)"><span id="debt"></span></p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Tithe:</p>
+        <p class="title"><span id="tithe"></span></p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Suggested Savings (60%):</p>
+        <p class="title"><span id="savings"></span></p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Cash:</p>
+        <p class="title"><span id="cash"></span></p>
+      </div>
+    </div>
+      </div>
+
+    </form>
+  </article>
+    </div>
+    <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">Services</p>
+          <p class="subtitle"><span id="services"><ul></ul></span</p>
+        </article>
+      </div>
+    </div>
+    <br><br>
+    <div class="level-item has-text-centered">
+      <div style="width:30%;" id="chart">
+      </div>
+
+  </body>
+</html>
